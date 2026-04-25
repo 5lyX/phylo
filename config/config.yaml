@@ -1,0 +1,97 @@
+defaults:
+  - _self_
+  - /scene_generation: all
+
+# ── Model / API ───────────────────────────────────────────────────────────────
+model_name: gpt-4o-mini             # LLM used for question generation
+verify_model_name: gpt-4o-mini      # LLM used for answer verification
+use_openrouter: False
+use_azure: False
+solve_locally: False                # Run LLM inference locally instead of via API
+
+# ── Generation ────────────────────────────────────────────────────────────────
+num_generations_per_problem: 128
+gpu_memory_utilization: 0.9
+
+# ── Math solving modes ────────────────────────────────────────────────────────
+numerical: True
+symbolic: False
+reverse: False
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+data_version: v10
+root_dir: ${oc.env:PHO_DATA}/${data_version}
+max_samples: -1                     # -1 means no limit
+
+# ── Verification ──────────────────────────────────────────────────────────────
+check_locally: False                # Use a locally-loaded model to verify answers
+
+# ── Scene filtering ───────────────────────────────────────────────────────────
+num_factors: -1                     # Split scenes into N shards (-1 = no split)
+factor_id: -1                       # Which shard to process (-1 = no split)
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+use_examples: False
+seed: 0
+debug: False
+
+# ── Sub-configs ───────────────────────────────────────────────────────────────
+
+
+eval_file_name: hcv_ipho_full/hcv_ipho_full_test.parquet
+
+# Recorder config
+recorder:
+  dt: 1e-3
+  duration: 2
+  render: false
+  parallel: true
+  num_workers: 8
+  fps: 60
+  height: 1080
+  width: 1920
+  lookat: [2, 0, 1.5]
+  custom_camera: true
+  distance: 15
+  azimuth: 45
+  elevation: -15
+  prune_timesteps: true
+  prune_first_contact: false
+  prune_derivative: true
+  prune_tendon_length_change: true
+  threshold_tendon_length_change: 1e-3
+  threshold_derivative: 1e-3
+  plot_data: false
+  debug: ${debug}
+  disable_trail: true
+  input_dir: batch_generation_out/physics_sim_data/v10/
+  mode: "normal"                    # "normal", "sweep", "batch"
+  orbit_camera: true
+  adaptive_camera_distance: true    # Dynamically adjust camera distance to scene
+  debug_adaptive_camera: false
+  enable_smart_focus: true          # Focus camera on the most relevant body
+  debug_focus_camera: false
+
+question_generation:
+  model_name: ${model_name}
+  solve_locally: ${solve_locally}
+  use_openrouter: ${use_openrouter}
+  num_generations_per_problem: 10
+  gpu_memory_utilization: ${gpu_memory_utilization}
+  symbolic: ${symbolic}
+  numerical: ${numerical}
+  reverse: ${reverse}
+  reuse: false
+  openai:
+    organization: ${oc.env:OPENAI_ORG_ID}
+    api_key: ${oc.env:PHO_OPENAI_API_KEY}
+  build_child_scenes: false
+
+hydra:
+    run:
+      dir: hydra_logs
+    job:
+      chdir: False
+    sweep:
+      dir: sweep_logs
+    output_subdir: sweep_logs

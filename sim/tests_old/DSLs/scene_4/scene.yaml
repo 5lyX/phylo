@@ -1,0 +1,39 @@
+scene:
+  name: Generated Scene
+  tag: BasicCollision
+  entities:
+  - name: twodcollisionplane_0
+    type: TwoDCollisionPlane
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 0.0
+      mass_values:
+      - 2
+      - 2
+      - 3
+      mass_positions:
+      - - -0.81
+        - -2.33
+      - - -0.6
+        - -0.61
+      - - 3.03
+        - 3.6
+      mass_initial_velocities:
+      - - -0.01
+        - 0.92
+      - - -0.21
+        - -0.8
+      - - 0.99
+        - 0.51
+      radii:
+      - 0.25
+      - 0.16
+      - 0.23
+      resolution_coefficient_list:
+      - - '0'
+        - '1'
+        - 1.0
+  connections: []

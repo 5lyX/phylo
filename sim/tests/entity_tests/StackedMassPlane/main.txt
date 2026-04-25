@@ -1,0 +1,5 @@
+In a system called 'stackedmassplane_0', 2 blocks are stacked on top of each other, resting on a plane with slope 30 degress. The masses of the blocks are 6.29 and 1.08 kg in bottom-to-top order.
+A string connected to the right side of the 2nd block from the bottom in 'stackedmassplane_0' runs parallel to the plane to wrap around a pulley on the right side of the plane, and extends outward to connect to the fixed point 'fixed_pulley_entity_1'.
+A string connected to the right side of the 1st block from the bottom in 'stackedmassplane_0' runs parallel to the plane to wrap around a pulley on the right side of the plane, and extends outward to connect to the block in 'mass_with_fixed_pulley_entity_2', parallel to the plane, after wrapping around a pulley on the left side of the plane.
+'fixed_pulley_entity_1' is a point on a fixed support.
+In a system called 'mass_with_fixed_pulley_entity_2', a block of mass 200 kg rests on a plane inclined at an angle of 70 degrees with horizontal. 

@@ -1,0 +1,142 @@
+scene:
+  name: Generated Scene
+  tag: AdvancedHybrid
+  entities:
+  - name: twosidemassplane_0
+    type: TwoSideMassPlane
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      mass_values:
+      - 1.0
+      use_left_site: USE_LEFT
+  - name: massprismplaneentity_1
+    type: MassPrismPlaneEntity
+    position:
+    - 0.0
+    - 1.0
+    - 0.0
+    parameters:
+      plane_slope: 0.0
+      prism_left_slope: 30
+      prism_right_slope: 90
+      block_mass_value: 1
+      prism_mass_value: 2
+      use_left_site: USE_LEFT
+      use_prism_left: true
+  - name: massprismplaneentity_2
+    type: MassPrismPlaneEntity
+    position:
+    - 0.0
+    - 2.0
+    - 0.0
+    parameters:
+      plane_slope: 0.0
+      prism_left_slope: 45
+      prism_right_slope: 90
+      block_mass_value: 1
+      prism_mass_value: 2
+      use_left_site: USE_LEFT
+      use_prism_left: true
+  - name: directedmass_3
+    type: DirectedMass
+    position:
+    - 0.0
+    - 3.0
+    - 0.0
+    parameters:
+      mass_type: Mass
+      mass_value: 4
+      pulley_param1:
+        angle: 30
+        distance: 10
+        side: top
+        offset: 0.57
+      pulley_param2:
+        angle: 120
+        distance: 10
+        side: top
+        offset: 0.37
+  - name: constantforcefixedpulley_4
+    type: ConstantForceFixedPulley
+    position:
+    - 0.0
+    - 4.0
+    - 0.0
+    parameters:
+      force: 6
+  - name: masswithfixedpulley_5
+    type: MassWithFixedPulley
+    position:
+    - 0.0
+    - 5.0
+    - 0.0
+    parameters:
+      mass_type: Mass
+      mass_values:
+      - 3
+      prism_mass_value: 4.84
+      use_left_site: USE_RIGHT
+      use_prism_left: false
+      plane_slope: 0
+      prism_left_slope: 30
+      prism_right_slope: 60
+  - name: stackedmassplane_6
+    type: StackedMassPlane
+    position:
+    - 0.0
+    - 6.0
+    - 0.0
+    parameters:
+      plane_slope: 30
+      mass_values:
+      - 4
+      - 1
+  connections:
+  - tendon:
+    - entity: twosidemassplane_0
+      direction: inner_to_outer
+      connecting_point: left
+    - entity: massprismplaneentity_1
+      direction: outer_to_inner
+      connecting_point: left
+  - tendon:
+    - entity: twosidemassplane_0
+      direction: inner_to_outer
+      connecting_point: right
+    - entity: massprismplaneentity_2
+      direction: outer_to_inner
+      connecting_point: left
+  - tendon:
+    - entity: massprismplaneentity_1
+      direction: inner_to_outer
+      connecting_point: right
+    - entity: directedmass_3
+      direction: outer_to_inner
+      connecting_point: side_1
+  - tendon:
+    - entity: massprismplaneentity_2
+      direction: inner_to_outer
+      connecting_point: right
+    - entity: constantforcefixedpulley_4
+      direction: outer_to_inner
+      connecting_point: default
+  - tendon:
+    - entity: stackedmassplane_6
+      direction: inner_to_outer
+      connecting_point: left
+      connecting_point_seq_id: 1
+    - entity: masswithfixedpulley_5
+      direction: outer_to_inner
+      connecting_point: default
+  - tendon:
+    - entity: stackedmassplane_6
+      direction: inner_to_outer
+      connecting_point: right
+      connecting_point_seq_id: 2
+    - entity: directedmass_3
+      direction: outer_to_inner
+      connecting_point: side_2
+    

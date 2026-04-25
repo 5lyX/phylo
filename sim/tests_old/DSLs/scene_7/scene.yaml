@@ -1,0 +1,46 @@
+scene:
+  name: Generated Scene
+  tag: AdvancedCollision
+  entities:
+  - name: complexcollisionplane_0
+    type: ComplexCollisionPlane
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 10
+      collision_bodies:
+      - body_type: spring_mass
+        position: -6.84
+        mass_values:
+        - 1
+        - 2
+        mass_positions:
+        - -1.68
+        - 1.06
+        springs:
+        - k: 80
+          original_length: 2.89
+      - body_type: sphere
+        position: -4.42
+        mass_value: 3
+        radius: 0.1
+        init_velocity: -0.5
+      - body_type: mass
+        position: 1
+        mass_value: 8.82
+        init_velocity: -2
+      - body_type: mass
+        position: 5
+        mass_value: 4.01
+        init_velocity: -3
+      - body_type: fixed_mass
+        position: 7.17
+        mass_value: 6.59
+      resolution_coefficients:
+      - 1.0
+      - 0.87
+      - 0.93
+      - 0.31
+  connections: []

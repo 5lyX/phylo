@@ -1,0 +1,5 @@
+In a system called 'fixed_pulley_start', a block of mass 1 kg is suspended in the air with the help of a light string that goes over a pulley. 
+The string that connects the block to an overhead pulley in 'fixed_pulley_start' extends outward to connect to the left side of the block in 'directed_mass'.
+In a system called directed_mass, a block of mass 2 Kg is constrained to only move along the horizontal axis. It is connected to two light strings, making angle 30 and 30 degrees on its left and right sides, respectively, with horizontal for lengths 2 and 2 m before reaching fixed pulleys.
+The string connected to the right side of the block in 'directed_mass' extends outwards to connect to the block in 'fixed_pulley_end' after wrapping over an overhead pulley.
+In a system called 'fixed_pulley_end', a block of mass 1 kg is suspended in the air with the help of a light string that goes over a pulley. 

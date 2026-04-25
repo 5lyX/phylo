@@ -1,0 +1,4 @@
+scene_types:
+  - DifficultOrbitalMotion
+num_scenes: ${num_scenes}
+exist_ok: false

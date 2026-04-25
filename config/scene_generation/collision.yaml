@@ -1,0 +1,8 @@
+scene_types:
+  - BasicCollision
+  - IntermediateCollision
+  - AdvancedCollision
+  - SpringBlockSystems
+  - DifficultSpringMass
+num_scenes: ${num_scenes}
+exist_ok: false

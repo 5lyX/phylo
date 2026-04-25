@@ -1,0 +1,26 @@
+scene_types:
+  # Pulley
+  - BasicPulley
+  - IntermediatePulley
+  - BasicInclinedPlaneFriction
+  - IntermediateInclinedPlaneFriction
+  - AdvancedInclinedPlaneFriction
+  - IntermediateHybrid
+  - AdvancedHybrid
+  # Rotation
+  - Rotation
+  - RigidBodyRotation
+  # Collision
+  - BasicCollision
+  - IntermediateCollision
+  - AdvancedCollision
+  - SpringBlockSystems
+  # Misc Difficult Scenes
+  - DifficultPulley
+  - DifficultSpringMass
+  - DifficultOrbitalMotion
+  - DifficultRocket
+  - DifficultProjectile
+  - DifficultElectroMagnetic
+num_scenes: ${num_scenes}
+exist_ok: false

@@ -1,0 +1,23 @@
+scene:
+  name: Generated Scene
+  tag: DifficultPulley
+  entities:
+  - name: massprismpulleyplane_0
+    type: MassPrismPulleyPlane
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 30.0
+      prism_left_slope: 45
+      prism_right_slope: 60
+      block_left_mass_value: 2.97
+      block_right_mass_value: 2.08
+      prism_mass_value: 3.31
+      condim: '1'
+      coefficient_of_friction:
+      - 0.0
+      - 0.0
+      - 0.0
+  connections: []

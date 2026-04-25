@@ -1,0 +1,19 @@
+scene:
+  name: Generated Scene
+  tag: DifficultRocket
+  entities:
+  - name: rocketentity_0
+    type: RocketEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      rocket_mass: 0.109
+      planet_mass: 2165.36
+      planet_radius: 1.006
+      v_exhaust: 26.01
+      dm_dt: -0.018
+      min_mass: 0.065
+      launch_angle: 0.0
+  connections: []

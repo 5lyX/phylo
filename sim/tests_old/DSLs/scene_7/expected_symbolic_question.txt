@@ -1,0 +1,8 @@
+A smooth table is inclined at an angle θ_1 degrees with the horizontal. There are multiple systems on this table.
+In a system called 'complexcollisionplane_0.spring_mass-0', 2 blocks are placed at -1.68 and 1.06 m on the table. They have masses m_1 and m_2 Kg respectively. These blocks are connected in series by springs (which might be initially stretched or compressed) of stiffness  and k_1 N/m respectively. The natural length of these springs are  and 2.89 respectively.
+In a system called 'complexcollisionplane_0.sphere-1', sphere of mass m_3 kg is placed at -4.42 m on the table. It is initially moving with a velocity of -0.5 m/s.
+In a system called 'complexcollisionplane_0.mass-2', a block of mass m_4 kg is placed at 1 m on the table. It is initially moving with a velocity of -2 m/s.
+In a system called 'complexcollisionplane_0.mass-3', a block of mass m_5 kg is placed at 5 m on the table. It is initially moving with a velocity of -3 m/s.
+A wall is fixed at 7.17 m on the table.
+ All collisions are perfectly elastic.
+What is the magnitude of the velocity of the 1st block in the system 'spring_mass-0' after t seconds? Assume acceleration due to gravity as 9.81 m/s^2, all strings inextensible, and all surfaces frictionless unless stated otherwise. All bodies are initially at rest unless stated otherwise. All plane inclinations are in counterclockwise direction wrt the viewing axis unless stated otherwise. 

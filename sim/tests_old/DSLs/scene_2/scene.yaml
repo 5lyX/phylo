@@ -1,0 +1,44 @@
+scene:
+  name: "Fixed-Movable-Fixed Pulley System"
+  tag: "IntermediatePulley"
+  entities:
+    - name: "fixed_pulley_start"
+      type: "MassWithFixedPulley"
+      position: [0, 0, 0]
+      parameters:
+        mass_type: "Mass"
+        mass_values: [1]
+    - name: "movable_pulley_system"
+      type: "MassWithMovablePulley"
+      position: [0, 1, 0]
+      parameters:
+        num_pulleys: 1
+        mass_type: "MassPrismPlane"
+        mass_values: [1]
+        prism_mass_value: 2
+        prism_left_slope: 30
+        prism_right_slope: 90
+        plane_slope: 0
+        use_left_site: "USE_LEFT"
+        use_prism_left: true
+    - name: "two_side_plane"
+      type: "TwoSideMassPlane"
+      position: [0, 2, 0]
+      parameters:
+        plane_slope: 0
+        mass_values: [1, 1]
+        use_left_site: "USE_LEFT"
+  connections:
+    - tendon:
+      - entity: "fixed_pulley_start"
+        direction: "inner_to_outer"
+      - entity: "movable_pulley_system"
+        direction: "left_to_right"
+        connecting_point: "left"
+    - tendon:
+      - entity: "movable_pulley_system"
+        direction: "inner_to_outer"
+        connecting_point: "right"
+      - entity: "two_side_plane"
+        direction: "outer_to_inner"
+        connecting_point: "right"

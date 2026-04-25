@@ -1,0 +1,28 @@
+scene:
+  name: collision
+  tag: AdvancedCollision
+  entities:
+    - name: ComplexCollisionPlane
+      type: ComplexCollisionPlane
+      position: [0.0, 1, 0.0]
+      parameters:
+        plane_slope: 0
+        collision_bodies:
+          - body_type: mass
+            mass_value: 2.0
+            position: 1.0
+            init_velocity: 2
+          - body_type: sphere
+            mass_value: 5
+            position: 2.5
+            init_velocity: -0.3
+          - body_type: fixed_mass
+            mass_value: 5.0
+            position: 0.0
+          - body_type: spring_mass
+            mass_values: [1.0, 1.0]
+            mass_positions: [3.0, 4.0]
+            springs:
+              - k: 50.0
+                original_length: 1.0
+  connections: []

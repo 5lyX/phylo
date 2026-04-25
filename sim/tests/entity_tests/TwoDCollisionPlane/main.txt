@@ -1,0 +1,10 @@
+In a system called 'twodcollisionplane_0', a smooth table (XY plane) has 3 spheres on it with the following properties (position and velocity are relative to the table):
+|   Sphere |   Mass (kg) | Initial Position (m)   | Initial Velocity (m/s)   |   Radius (m) |
+|----------|-------------|------------------------|--------------------------|--------------|
+|        1 |           2 | (3.72, -3.36)          | (-1.01, -0.13)           |         0.13 |
+|        2 |           5 | (2.15, -2.36)          | (0.56, -1.13)            |         0.28 |
+|        3 |           4 | (1.92, -1.74)          | (1.01, 0.99)             |         0.27 |
+
+The table is now rotated, counterclockwise, along the x axis by an angle 30.0 degrees, therefore rotating the position and initial velocities too in global frame.
+The coefficient of restitution between each pair of spheres is given as:
+\(e_{1,2} = 0.5\)

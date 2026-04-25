@@ -1,0 +1,6 @@
+A smooth table is inclined at an angle 0 degrees with the horizontal. There are multiple systems on this table.
+In a system called 'ComplexCollisionPlane.mass-0', a block of mass 2.0 kg is placed at 1.0 m on the table. It is initially moving with a velocity of 2 m/s.
+In a system called 'ComplexCollisionPlane.sphere-1', sphere of mass 5 kg is placed at 2.5 m on the table. It is initially moving with a velocity of -0.3 m/s.
+A wall is fixed at 0.0 m on the table.
+In a system called 'ComplexCollisionPlane.spring_mass-3', 2 blocks are placed at 3.0 and 4.0 m on the table. They have masses 1.0 and 1.0 Kg respectively. These blocks are connected in series by springs (which might be initially stretched or compressed) of stiffness 50.0 N/m respectively. The natural length of these springs are 1.0 respectively.
+ All collisions are perfectly elastic. All blocks and walls have dimensions of 0.1 x 0.1 x 0.1 and all spheres have radius of 0.1 m.

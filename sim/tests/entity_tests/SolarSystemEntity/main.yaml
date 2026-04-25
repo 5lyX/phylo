@@ -1,0 +1,31 @@
+scene:
+  name: Generated Scene
+  tag: DifficultOrbitalMotion
+  entities:
+  - name: solarsystementity_0
+    type: SolarSystemEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      star_mass: 3.45
+      star_radius: 1.14
+      planets:
+      - mass: 0.46
+        radius: 0.06
+        position:
+        - 1.45
+        - 0.62
+        velocity:
+        - -1.85
+        - 4.31
+      - mass: 0.43
+        radius: 0.08
+        position:
+        - -0.74
+        - -1.75
+        velocity:
+        - 3.93
+        - -1.66
+  connections: []

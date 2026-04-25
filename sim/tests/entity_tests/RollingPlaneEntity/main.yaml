@@ -1,0 +1,26 @@
+scene:
+  name: Generated Scene
+  tag: RollingPlane
+  entities:
+  - name: rollingplaneentity_0
+    type: RollingPlaneEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      slope: 0
+      mesh_body:
+        body_type: bowl
+        name: rollingplaneentity_0.mesh_body
+        pos:
+        - 0
+        - 0
+        - 0
+        radius: 0.27
+        height: 0.11
+        thickness: 0.23
+      body_angle: -30
+      mass_spec: null
+      coefficient_of_friction: 0.85
+  connections: []

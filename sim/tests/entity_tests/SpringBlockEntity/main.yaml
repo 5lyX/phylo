@@ -1,0 +1,28 @@
+scene:
+  name: spring
+  tag: SpringBlockSystems
+  entities:
+  - name: springblockentity_0
+    type: SpringBlockEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      original_lengths:
+      - 1
+      - 1
+      - 1
+      stiffnesses:
+      - 50
+      - 50
+      - 100
+      connecting_angles:
+      - 45
+      - 90
+      - 180
+      connecting_distances:
+      - 1.414
+      - 1
+      - 2
+  connections: []

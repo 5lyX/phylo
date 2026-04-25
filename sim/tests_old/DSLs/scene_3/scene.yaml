@@ -1,0 +1,13 @@
+scene:
+  name: mass_box_plane_entity
+  tag: "DifficultPulley"
+  entities:
+    - name: mass_box_plane
+      type: MassBoxPlaneEntity
+      position: [0, 0, 0]
+      parameters:
+        hang_option: HANG_BOTH
+        box_mass_value: 10
+        left_mass_value: 2
+        right_mass_value: 1
+        top_mass_value: 1

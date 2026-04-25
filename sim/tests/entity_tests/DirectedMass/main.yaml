@@ -1,0 +1,44 @@
+scene:
+  name: "DirectedMass with Two Connections"
+  entities:
+    - name: "fixed_pulley_start"
+      type: "MassWithFixedPulley"
+      position: [0, 0, 0]
+      parameters:
+        mass_type: "Mass"
+        mass_values: [1]
+    - name: "directed_mass"
+      type: "DirectedMass"
+      position: [0, 1, 0]
+      parameters:
+        mass_type: "Mass"
+        mass_value: 2
+        pulley_param1:
+          angle: 30
+          distance: 2
+          side: "top"
+          offset: 0
+        pulley_param2:
+          angle: 30
+          distance: 2
+          side: "bottom"
+          offset: 0
+    - name: "fixed_pulley_end"
+      type: "MassWithFixedPulley"
+      position: [0, 2, 0]
+      parameters:
+        mass_type: "Mass"
+        mass_values: [1]
+  connections:
+    - tendon:
+        - entity: "fixed_pulley_start"
+          direction: "inner_to_outer"
+        - entity: "directed_mass"
+          direction: "outer_to_inner"
+          connecting_point: "side_1"
+    - tendon:
+        - entity: "directed_mass"
+          direction: "inner_to_outer"
+          connecting_point: "side_2"
+        - entity: "fixed_pulley_end"
+          direction: "outer_to_inner"

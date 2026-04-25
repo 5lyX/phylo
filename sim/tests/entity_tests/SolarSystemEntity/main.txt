@@ -1,0 +1,7 @@
+In a planetary system, a star with mass 3.45 M and radius 1.14 R is at the center. 2 planets orbit around the star in coplanar orbits.  The planets have the following properties at a given time (lets say t=0): 
+|   Planet | Mass (M)   | Radius (R)   | Position (R)   | Velocity (R/T)   |
+|----------|------------|--------------|----------------|------------------|
+|        1 | 0.46    | 0.06    | 1.45 0.62      | -1.85 4.31      |
+|        2 | 0.43    | 0.08    | -0.74 -1.75      | 3.93 -1.66      |
+
+Assume that the star remains fixed at the center of the system, and planets do not apply any gravitational force on each other. The units (mass: M, length: R, time: T) are custom such that the gravitational constant G = 10.0; they are not SI units.

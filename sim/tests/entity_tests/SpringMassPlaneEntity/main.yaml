@@ -1,0 +1,34 @@
+scene:
+  name: Generated Scene
+  tag: DifficultSpringMass
+  entities:
+  - name: springmassplaneentity_0
+    type: SpringMassPlaneEntity
+    entity_type: SpringMassPlaneEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      mass_values:
+      - 2.24
+      - 2.69
+      - 2.58
+      mass_positions:
+      - -1.21
+      - 0.14
+      - 0.95
+      spring_configs:
+      - index: 0
+        k: 75.47
+        original_length: 1.41
+        damping: 10.37
+      - index: 1
+        k: 185.38
+        original_length: 0.52
+        damping: 10.37
+      end_spring_config:
+        k: 161.85
+        original_length: 1.88
+      damping: 10.37
+  connections: []

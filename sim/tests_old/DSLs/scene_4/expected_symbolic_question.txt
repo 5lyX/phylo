@@ -1,0 +1,11 @@
+In a system called 'twodcollisionplane_0', a smooth table (XY plane) has 3 spheres on it with the following properties (position and velocity are relative to the table):
+|   Sphere | Mass (kg)   | Initial Position (m)   | Initial Velocity (m/s)   |   Radius (m) |
+|----------|-------------|------------------------|--------------------------|--------------|
+|        1 | m_1     | (-0.81, -2.33)         | (-0.01, 0.92)            |         0.25 |
+|        2 | m_2     | (-0.6, -0.61)          | (-0.21, -0.8)            |         0.16 |
+|        3 | m_3     | (3.03, 3.6)            | (0.99, 0.51)             |         0.23 |
+
+The table is now rotated, counterclockwise, along the x axis by an angle θ_1 degrees, therefore rotating the position and initial velocities too in global frame.
+The coefficient of restitution between each pair of spheres is given as:
+\(e_{1,2} = e_1\)
+What is the linear kinetic energy of the 1st sphere in the system 'twodcollisionplane_0' after t seconds? Assume acceleration due to gravity as 9.81 m/s^2, all strings inextensible, and all surfaces frictionless unless stated otherwise. All bodies are initially at rest unless stated otherwise. All plane inclinations are in counterclockwise direction wrt the viewing axis unless stated otherwise. 

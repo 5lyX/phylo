@@ -1,0 +1,54 @@
+scene:
+  name: Generated Scene
+  entities:
+  - name: stackedmassplane_0
+    type: StackedMassPlane
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 30
+      mass_values:
+      - 6.29
+      - 1.08
+      use_left_site: USE_LEFT
+  - name: fixed_pulley_entity_1
+    type: FixedPulleyEntity
+    position:
+    - 0.0
+    - 1.0
+    - 0.0
+    parameters: {}
+  - name: mass_with_fixed_pulley_entity_2
+    type: MassWithFixedPulley
+    position:
+    - 0.0
+    - 2.0
+    - 0.0
+    parameters:
+      mass_type: MassPlane
+      mass_values:
+      - 200
+      prism_mass_value: 20
+      use_left_site: USE_LEFT
+      use_prism_left: true
+      plane_slope: 70
+      prism_left_slope: 38.65
+      prism_right_slope: 22.31
+  connections:
+  - tendon:
+    - entity: stackedmassplane_0
+      direction: inner_to_outer
+      connecting_point: right
+      connecting_point_seq_id: 2
+    - entity: fixed_pulley_entity_1
+      direction: outer_to_inner
+      connecting_point: default
+  - tendon:
+    - entity: stackedmassplane_0
+      direction: inner_to_outer
+      connecting_point: right
+    - entity: mass_with_fixed_pulley_entity_2
+      direction: outer_to_inner
+      connecting_point: default

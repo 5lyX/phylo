@@ -1,0 +1,5 @@
+scene_types:
+  - Rotation
+  - RigidBodyRotation
+num_scenes: ${num_scenes}
+exist_ok: false

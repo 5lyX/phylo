@@ -1,0 +1,87 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the BSD-style license found in the
+# LICENSE file in the root directory of this source tree.
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-phylo"
+version = "0.2.0"
+description = "Sim2Reason Physics Reasoning Environment for OpenEnv — adversarial self-play with MuJoCo"
+requires-python = ">=3.10"
+dependencies = [
+    # Core OpenEnv runtime (provides FastAPI server + HTTP client types)
+    "openenv-core[core]>=0.2.2",
+
+    # Physics simulation (MuJoCo – headless on Linux T4 via MUJOCO_GL=egl)
+    "mujoco>=3.1.0",
+
+    # Numerical / data
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.11.0",
+
+    # Config management (matches Sim2Reason)
+    "hydra-core>=1.3.0",
+    "omegaconf>=2.3.0",
+
+    # RL / LLM training
+    "torch>=2.2.0",
+    "transformers>=4.42.0",
+    "trl>=0.9.0",
+    "peft>=0.11.0",
+    "accelerate>=0.30.0",
+    "datasets>=2.19.0",
+    "bitsandbytes>=0.43.0",
+
+    # Monitoring / logging
+    "wandb>=0.17.0",
+    "tqdm>=4.66.0",
+
+    # Async / concurrency
+    "aiohttp>=3.9.0",
+    "aiofiles>=23.2.0",
+
+    # Misc
+    "ipdb>=0.13.13",
+    "pyyaml>=6.0",
+    "imageio>=2.34.0",
+    "matplotlib>=3.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+# Server entry point
+server = "phylo.server.app:main"
+# Self-play loop
+self-play = "phylo.self_play.self_play_loop:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+    "phylo",
+    "phylo.server",
+    "phylo.adversary",
+    "phylo.solver",
+    "phylo.self_play",
+    "phylo.training",
+    "phylo.evaluation",
+]
+[tool.setuptools.package-dir]
+"phylo" = "."
+"phylo.server" = "server"
+"phylo.adversary" = "adversary"
+"phylo.solver" = "solver"
+"phylo.self_play" = "self_play"
+"phylo.training" = "training"
+"phylo.evaluation" = "evaluation"

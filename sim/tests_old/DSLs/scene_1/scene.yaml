@@ -1,0 +1,28 @@
+scene:
+  name: "Fixed Pulley System with Mass Prism Plane"
+  tag: "IntermediatePulley"
+  entities:
+    - name: "fixed_pulley_start"
+      type: "MassWithFixedPulley"
+      position: [0, 2, 0]
+      parameters:
+        mass_type: "Mass"
+        mass_values: [0.5]
+    - name: "fixed_pulley_end"
+      type: "MassWithFixedPulley"
+      position: [0, 0, 0]
+      parameters:
+        mass_type: "MassPrismPlane"
+        mass_values: [1]
+        plane_slope: 0
+        prism_left_slope: 30
+        prism_right_slope: 90
+        prism_mass_value: 2
+        use_left_site: "USE_LEFT"
+        use_prism_left: True
+  connections:
+    - tendon:
+      - entity: "fixed_pulley_start"
+        direction: "inner_to_outer"
+      - entity: "fixed_pulley_end"
+        direction: "outer_to_inner"

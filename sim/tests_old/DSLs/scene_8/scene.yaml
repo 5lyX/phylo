@@ -1,0 +1,20 @@
+scene:
+  name: Generated Scene
+  tag: Rotation
+  entities:
+  - name: pendulumentity_0
+    type: PendulumEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      rope_length: 1.45
+      mass_value: 5
+      angle: 60
+      init_velocity_dict:
+        sphere:
+        - -0.36
+        - 0.78
+        - 0
+  connections: []

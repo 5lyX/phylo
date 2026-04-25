@@ -1,0 +1,33 @@
+scene:
+  name: Generated Scene
+  tag: DifficultElectroMagnetic
+  entities:
+  - name: electromagneticentity_0
+    type: ElectroMagneticEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      mass: 0.67
+      q: 2.77
+      init_velocity:
+      - -0.63
+      - 1.09
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      field_configs:
+      - field_type: electric
+        field_strength: 0.22
+        field_shape: box
+        field_angle: 296.15
+        field_range:
+        - 1.36
+        - 0.56
+        field_position:
+        - 0.88
+        - 0.51
+        mode: uniform_electric
+  connections: []

@@ -1,0 +1,3 @@
+In a system called 'massboxplaneentity_0', a long movable box of mass 1.56 kg rests on a plane inclined at 0.55 degrees. A small block of mass 0.6 kg is placed on its top, allowing it to slide freely on the box. A pulley is fixed to the right edge of the box. A rope is attached to the right side of the top block, passes over the pulley, and connects to a hanging block of mass 0.28 kg on the right side. The hanging block maintains contact with the side edge of the box.
+A string connected to the right side of the box in 'massboxplaneentity_0' extends outward and is pulled by 'constantforcefixedpulley_1'.
+'constantforcefixedpulley_1' pulls the string attached to it with a constant force of 0.28 N.

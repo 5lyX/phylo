@@ -1,0 +1,1 @@
+In a setup, a ball of mass 1.0 kg is thrown horizontaly. The ball is launched from an initial height of 1.67 m from the ground and it has an initial speed of 1.77 m/s. Assume that horizontal is +ve x axis and verticaly upwards in +ve y axis. The coefficient of restitution between the ball and the ground is 1.0.

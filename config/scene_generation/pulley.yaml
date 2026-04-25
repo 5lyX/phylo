@@ -1,0 +1,11 @@
+scene_types:
+  - BasicPulley
+  - IntermediatePulley
+  - BasicInclinedPlaneFriction
+  - IntermediateInclinedPlaneFriction
+  - AdvancedInclinedPlaneFriction
+  - IntermediateHybrid
+  - AdvancedHybrid
+  - DifficultPulley
+num_scenes: ${num_scenes}
+exist_ok: false

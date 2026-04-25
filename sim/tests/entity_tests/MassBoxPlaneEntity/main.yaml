@@ -1,0 +1,40 @@
+scene:
+  name: Generated Scene
+  tag: DifficultPulley
+  entities:
+  - name: massboxplaneentity_0
+    type: MassBoxPlaneEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 0.55
+      box_half_length: 20.0
+      box_half_width: 0.5
+      box_half_height: 20.0
+      hang_option: HANG_RIGHT
+      box_mass_value: 1.56
+      top_mass_value: 0.6
+      right_mass_value: 0.28
+      coefficient_of_friction:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  - name: constantforcefixedpulley_1
+    type: ConstantForceFixedPulley
+    position:
+    - 0.0
+    - 10.0
+    - 0.0
+    parameters:
+      force: 0.28
+  connections:
+  - tendon:
+    - entity: massboxplaneentity_0
+      direction: inner_to_outer
+      connecting_point: right
+    - entity: constantforcefixedpulley_1
+      direction: outer_to_inner
+      connecting_point: default

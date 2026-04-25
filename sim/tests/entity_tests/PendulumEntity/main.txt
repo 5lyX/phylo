@@ -1,0 +1,1 @@
+A pendulum with a rope length of 0.79 m is attached to a fixed point in the ceiling on one end and a bob of mass 2.09 kg on the other end. The bob has an initial velocity of (-0.14, 0.94) m/s along the global x and y directions (i.e., in the horizontal plane with z as vertical), and the rope initially makes an angle of 24.05 degrees with the vertical.

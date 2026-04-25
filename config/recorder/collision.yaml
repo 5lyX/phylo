@@ -1,0 +1,5 @@
+prune_timesteps: false
+prune_first_contact: false
+prune_derivative: false
+prune_tendon_length_change: false
+duration: 10

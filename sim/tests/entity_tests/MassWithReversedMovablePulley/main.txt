@@ -1,0 +1,3 @@
+In a system called 'masswithreversedmovablepulley_0', a movable pulley of mass 0.15 kg supports two blocks of masses 4.36 kg and 4.29 kg hanging on its left and right sides respectively, pulling the pulley down. 
+The string that connects the movable pulley in 'masswithreversedmovablepulley_0' to an overhead fixed pulley (pulling it upwards) extends outward to connect to the block in 'masswithfixedpulley_1' after wrapping over an overhead pulley.
+In a system called 'masswithfixedpulley_1', a block of mass 2.6 kg is suspended in the air with the help of a light string that goes over a pulley. 

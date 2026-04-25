@@ -1,0 +1,46 @@
+scene:
+  name: Generated Scene
+  tag: BasicInclinedPlaneFriction
+  entities:
+  - name: massprismplaneentity_0
+    type: MassPrismPlaneEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      plane_slope: 0.0
+      prism_left_slope: 30
+      prism_right_slope: 60
+      block_mass_value: 2.8
+      prism_mass_value: 3.4
+      use_left_site: USE_LEFT
+      use_prism_left: true
+      coefficient_of_friction:
+      - 0.0
+      - 0.0
+  - name: masswithfixedpulley_1
+    type: MassWithFixedPulley
+    position:
+    - 0.0
+    - 10.0
+    - 0.0
+    parameters:
+      mass_type: MassPrismPlane
+      mass_values:
+      - 16.51
+      - 4.51
+      prism_mass_value: 1.4
+      use_left_site: USE_RIGHT
+      use_prism_left: false
+      plane_slope: 0
+      prism_left_slope: 33.72
+      prism_right_slope: 69.15
+  connections:
+  - tendon:
+    - entity: massprismplaneentity_0
+      direction: inner_to_outer
+      connecting_point: left
+    - entity: masswithfixedpulley_1
+      direction: outer_to_inner
+      connecting_point: default

@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv_311/
+venv/
+env/
+.python-version
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Simulation & Training Outputs (Large Files)
+self_play_output/
+replay_buffer/
+eval_output/
+base_eval.json/
+solver_grpo_output/
+xml_output/
+dsl_output/
+tensorboard_log/
+*.parquet
+*.csv
+*.png
+*.log
+
+# Generated Assets (Keep geom_sources, ignore generated ones)
+sim/geom_sources/generated_sources/
+*.stl
+*.obj
+*.mtl
+!sim/geom_sources/fixed_sources/**
+
+# MuJoCo
+*.xml
+
+# Blender
+*.blend
+*.blend1
+
+# LLM & Checkpoints
+wandb/
+checkpoint-*/
+results/
+.cache/
+huggingface_cache/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local env/secrets
+.env
+.env.*
+!.env.example
+
+# Temporary / Scratch
+scratch/
+*.tmp
+*.bak

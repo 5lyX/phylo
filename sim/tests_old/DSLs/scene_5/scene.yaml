@@ -1,0 +1,77 @@
+scene:
+  name: Generated Scene
+  tag: IntermediateHybrid
+  entities:
+  - name: masswithreversedmovablepulley_0
+    type: MassWithReversedMovablePulley
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      mass_values:
+      - 1
+      - 2
+      mass_type: Mass
+      pulley_mass: 0.1
+  - name: masswithmovablepulley_1
+    type: MassWithMovablePulley
+    position:
+    - 0.0
+    - 1.0
+    - 0.0
+    parameters:
+      num_pulleys: 1
+      mass_type: Mass
+      mass_values:
+      - 0.5
+      - 0.5
+      prism_mass_value: 0.61
+      plane_slope: 0
+      prism_left_slope: 30
+      prism_right_slope: 60
+      use_left_site: USE_LEFT
+      pulley_mass: 0.1
+  - name: constantforcefixedpulley_2
+    type: ConstantForceFixedPulley
+    position:
+    - 0.0
+    - 2.0
+    - 0.0
+    parameters:
+      force: 5
+  - name: masswithfixedpulley_3
+    type: MassWithFixedPulley
+    position:
+    - 0.0
+    - 3.0
+    - 0.0
+    parameters:
+      mass_type: MassPlane
+      mass_values:
+      - 1
+      - 2
+      prism_mass_value: 3.59
+      use_left_site: USE_RIGHT
+      use_prism_left: true
+      plane_slope: 30
+      prism_left_slope: 30
+      prism_right_slope: 60
+  connections:
+  - tendon:
+    - entity: masswithreversedmovablepulley_0
+      direction: inner_to_outer
+      connecting_point: top
+    - entity: masswithmovablepulley_1
+      direction: left_to_right
+      connecting_point: default
+    - entity: constantforcefixedpulley_2
+      direction: outer_to_inner
+      connecting_point: default
+  - tendon:
+    - entity: masswithfixedpulley_3
+      direction: inner_to_outer
+      connecting_point: default
+    - entity: masswithmovablepulley_1
+      direction: outer_to_inner
+      connecting_point: right

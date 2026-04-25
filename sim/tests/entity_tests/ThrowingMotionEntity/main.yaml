@@ -1,0 +1,23 @@
+scene:
+  name: Generated Scene
+  tag: DifficultProjectile
+  entities:
+  - name: projectileentity_0
+    type: ThrowingMotionEntity
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      initial_height: 1.67
+      initial_speed: 1.77
+      initial_angle: 0
+      initial_angular_velocity: 0
+      ball_mass: 1.0
+      ball_radius: 0.1
+      coefficient_of_friction: 0.0
+      resolution_coefficient_list:
+      - - projectileentity_0.ball
+        - projectileentity_0.plane
+        - 1.0
+  connections: []

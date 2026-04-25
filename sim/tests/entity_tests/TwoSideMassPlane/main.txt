@@ -1,0 +1,5 @@
+In a system called 'twosidemassplane_0', a block of mass 1.0 kg rests on a plane inclined at an angle of 0 degrees. 
+A string connected to the left side of the block in 'twosidemassplane_0' runs parallel to the plane to wrap around a pulley on the left side of the plane, and extends outward to connect to the prism in 'masswithfixedpulley_1', parallel to the plane, after wrapping around a pulley on the right side of the plane.
+A string connected to the right side of the block in 'twosidemassplane_0' runs parallel to the plane to wrap around a pulley on the right side of the plane, and extends outward to connect to the block in 'masswithfixedpulley_2', parallel to the plane, after wrapping around a pulley on the left side of the plane.
+In a system called 'masswithfixedpulley_1', a block of mass 17.07 kg rests on the right side a movable prism of mass 1.66 Kg. The prism makes an angle 22.53 degrees with the plane, which in turn makes an angle 0 degrees with horizontal.  
+In a system called 'masswithfixedpulley_2', a block of mass 6.29 kg rests on a plane inclined at an angle of 10.0 degrees with horizontal. 

@@ -1,0 +1,40 @@
+scene:
+  name: Generated Scene
+  tag: BasicPulley
+  entities:
+  - name: masswithreversedmovablepulley_0
+    type: MassWithReversedMovablePulley
+    position:
+    - 0.0
+    - 0.0
+    - 0.0
+    parameters:
+      mass_values:
+      - 4.36
+      - 4.29
+      mass_type: Mass
+      pulley_mass: 0.15
+  - name: masswithfixedpulley_1
+    type: MassWithFixedPulley
+    position:
+    - 0.0
+    - 10.0
+    - 0.0
+    parameters:
+      mass_type: Mass
+      mass_values:
+      - 2.6
+      prism_mass_value: 2.62
+      use_left_site: USE_RIGHT
+      use_prism_left: false
+      plane_slope: 0
+      prism_left_slope: 30
+      prism_right_slope: 60
+  connections:
+  - tendon:
+    - entity: masswithreversedmovablepulley_0
+      direction: inner_to_outer
+      connecting_point: top
+    - entity: masswithfixedpulley_1
+      direction: outer_to_inner
+      connecting_point: default

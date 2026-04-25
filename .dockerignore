@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.pyc
+.venv
+.venv_311
+venv
+env
+*.egg-info
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage
+htmlcov
+
+# Simulation & Data (Too large for image)
+self_play_output
+replay_buffer
+eval_output
+base_eval.json
+solver_grpo_output
+wandb
+tensorboard_log
+xml_output
+dsl_output
+*.parquet
+*.csv
+*.log
+*.tmp
+*.bak
+
+# Models & Checkpoints
+checkpoint-*
+.cache
+huggingface_cache
+
+# IDEs
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Local env/secrets
+.env
+.env.*
+!.env.example
+
+# Temporary
+scratch
